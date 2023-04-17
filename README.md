@@ -71,7 +71,7 @@ auto count = utec::count_char(text, '.')
 std::cout << "count: " << std::endl;
 ```
 
-## Question #3 - Sumatoria de arreglos estáticos
+## Question #3 - Sumatoria de colecciones estáticas y dinamicas
 Crear template de función `calcular_total` que para cualquiera de los siguientes contenedores: arreglo estático, `std::array`, `std::vector`, `std::deque`, retorne el total.
   
 **Use Case #1: arreglo estático**  
@@ -136,7 +136,7 @@ for(const auto& item: deq_sorted)
     std::cout << item << std::endl;
 ```
 
-**Use Case # 3: Doubles**
+**Use Case # 3: Points**
 ```cpp
 std::vector vec = {
         point_t(1, 1, 1), 
