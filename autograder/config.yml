@@ -10,3 +10,5 @@ required_files:
   - P4.h
   - P5.cpp
   - P5.h
+  - P6.cpp
+  - P6.h
