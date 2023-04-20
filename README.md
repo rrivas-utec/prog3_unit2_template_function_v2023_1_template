@@ -73,7 +73,7 @@ auto count = utec::count_char(text, '.')
 std::cout << "count: " << std::endl;
 ```
 
-## Question #3 - Sumatoria de arreglos estáticos
+## Question #3 - Sumatoria de colecciones estáticas y dinamicas
 Crear template de función `calcular_total` que para cualquiera de los siguientes contenedores: arreglo estático, `std::array`, `std::vector`, `std::deque`, retorne el total.
   
 **Use Case #1: arreglo estático**  
@@ -122,7 +122,7 @@ public:
 };    
 ```
 
-**Use Case # 1: integers**
+**Use Case # 1: Enteros**
 ```cpp
 std::vector vec = {1, 4, 5, 2, 3};
 auto vec_sorted = utec::quick_sort(vec);
@@ -130,7 +130,7 @@ for(const auto& item: vec_sorted)
     std::cout << item << std::endl;
 ```
 
-**Use Case # 2: doubles**
+**Use Case # 2: Doubles**
 ```cpp
 std::deque deq = {10.0, 4.5, 5.3, 2.4, 3.3};
 auto deq_sorted = utec::quick_sort(deq);
@@ -138,7 +138,7 @@ for(const auto& item: deq_sorted)
     std::cout << item << std::endl;
 ```
 
-**Use Case # 3: doubles**
+**Use Case # 3: Points**
 ```cpp
 std::vector vec = {
         point_t(1, 1, 1), 
@@ -151,33 +151,3 @@ for(const auto& point: vec_sorted)
     std::cout << point << std::endl;
 ```
 
-## Question #5 - Compare values
-Generar la función `compare` cuya cantidad de parámetros sea variada y que realice la comparación de los parámetros **pares** con los parámetros **impares** y devuelva true si todos los pares son iguales con los impares y false en caso contrario.
-
-**Use Case # 1: integers**
-```cpp
-cout << compare(1, 1, 2, 2, 4, 4) << endl; // true 
-```
-
-**Use Case # 2: doubles**
-```cpp
-cout << compare(1.1, 1.1, 2.2, 3.3, 4.9, 4.9) << endl; // false
-```
-
-**Use Case # 3: integers**
-```cpp
-cout << compare(1, 1, 2, 2, 3) << endl; // true
-```
-
-## Question #6 - Sums & products
-Generar la función `sum_product` cuya cantidad de parámetros sea variado y que realice la multiplicación de los parámetros pares con los parámetros impares y que devuelva la suma de todos estos productos.
-
-**Use Case # 1: integers**
-```cpp
-cout << sum_product(1, 1, 2, 2, 4, 4) << endl; // 21 
-```
-
-**Use Case # 2: doubles**
-```cpp
-cout << sum_product(1.0, 1.0, 2.0, 2.0, 4.0, 4.0) << endl; // 21.0 
-```
