@@ -1,4 +1,4 @@
-# Task #0: Ejercicios de Templates de Funciones  
+# Task #0: Ejercicios de Templates de Funciones
 **course:** Programación III  
 **unit:** 2  
 **cmake project:** prog3_unit2_template_function_v2023_1
@@ -12,14 +12,14 @@ Subir a gradescope los siguientes archivos:
 - `P6.h`, `P6.cpp`
 
 ## Question #1 - Contar caracteres
-  
-Crear una función template `count_char` que reciba como parámetro una cadena de caracteres de cualquiera de las siguientes colecciones: 
-    - cadena delimitada por 0,  
-    - `std::string`, 
-    - `std::vector`, 
-    - `std::array` 
 
-ademas reciba un carácter representado por el tipo de datos `char`. 
+Crear una función template `count_char` que reciba como parámetro una cadena de caracteres de cualquiera de las siguientes colecciones:
+- cadena delimitada por 0,  
+- `std::string`,
+- `std::vector`,
+- `std::array`
+
+ademas reciba un carácter representado por el tipo de datos `char`.
 
 y retorne la cantidad de veces que el carácter aparece en la cadena de caracteres. La función no es sensible a las mayúsculas.
 
@@ -75,8 +75,8 @@ std::cout << "count: " << std::endl;
 
 ## Question #3 - Sumatoria de colecciones estáticas y dinámicas
 Crear template de función `calcular_total` que para cualquiera de los siguientes contenedores: arreglo estático, `std::array`, `std::vector`, `std::deque`, retorne el total.
-  
-**Use Case #1: arreglo estático**  
+
+**Use Case #1: arreglo estático**
 ```cpp
 int arr[] = {11, 12, 13, 14, 20, 23};
 auto total = calcular_total(arr);
@@ -106,8 +106,8 @@ std::cout << total << std::endl;
 
 ## Question #4 - Ordenar colección
 Crear template de función `quick_sort` que permita ordenar en forma ascendente utilizando el algoritmo quick_sort para cualquiera de los siguientes contenedores: `std::vector`, `std::deque` que contenga objetos que tenga implementada la sobrecarga de los operadores de comparación.
-  
-Para realizar la prueba con el ejemplo point, implemente la clase `point_t` que tenga la siguiente declaración básica, debera de completar la declaración con las sobrecargas o métodos que se requieran. 
+
+Para realizar la prueba con el ejemplo point, implemente la clase `point_t` que tenga la siguiente declaración básica, debera de completar la declaración con las sobrecargas o métodos que se requieran.
 
 El criterio de ordenamiento de los puntos sera la distancia entre el punto y la coordenada `(0, 0, 0)`
 
@@ -150,4 +150,3 @@ auto vec_sorted = utec::quick_sort(vec);
 for(const auto& point: vec_sorted)
     std::cout << point << std::endl;
 ```
-
