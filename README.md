@@ -249,7 +249,7 @@ auto total = utec::sum(1.1, 2.2, 3.3, 4.4, 5.5);
 std::cout << total << std::endl;
 ```
 
-#Question #11 - Variadic template function
+## Question #11 - Variadic template function
 Crear una función template `concat` que reciba una cantidad variable de parámetros y retorne la concatenación de los mismos.
 
 **Use Case # 1: Concatenación de strings**
@@ -274,7 +274,7 @@ for(const auto& item: vec)
     std::cout << item << std::endl;
 ```
 
-#Question #12 - Variadic template function
+## Question #12 - Variadic template function
 Crear una función template `max` que reciba una cantidad variable de parámetros y retorne el valor máximo de los mismos.
 
 **Use Case # 1: Máximo de enteros**
