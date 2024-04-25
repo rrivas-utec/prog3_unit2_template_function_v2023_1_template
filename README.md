@@ -10,6 +10,12 @@ Subir a gradescope los siguientes archivos:
 - `P4.h`, `P4.cpp`
 - `P5.h`, `P5.cpp`
 - `P6.h`, `P6.cpp`
+- `P7.h`, `P7.cpp`
+- `P8.h`, `P8.cpp`
+- `P9.h`, `P9.cpp`
+- `P10.h`, `P10.cpp`
+- `P11.h`, `P11.cpp`
+- `P12.h`, `P12.cpp`
 
 ## Question #1 - Contar caracteres
 
@@ -150,3 +156,134 @@ auto vec_sorted = utec::quick_sort(vec);
 for(const auto& point: vec_sorted)
     std::cout << point << std::endl;
 ```
+
+## Question #5 - Buscar datos
+Crear template de función `buscar` que permita buscar un dato en cualquiera de los siguientes contenedores: `std::vector`, `std::deque`, `std::list`, `std::forward_list`, `std::set`.
+
+**Use Case # 1: Vector**
+```cpp
+std::vector vec = {1, 4, 5, 2, 3};
+auto it = utec::buscar(std::begin(vec), std::end(vec), 5);
+std::cout << *it << std::endl;
+```
+
+**Use Case # 2: List**
+```cpp
+std::list lst = {1, 4, 5, 2, 3};
+auto it = utec::buscar(std::begin(lst), std::end(lst), 5);
+std::cout << *it << std::endl;
+```
+
+**Use Case # 3: Set**
+```cpp
+std::set st = {1, 4, 5, 2, 3};
+auto it = utec::buscar(std::begin(st), std::end(st), 5);
+std::cout << *it << std::endl;
+```
+
+## Question #6 - Copiar elementos
+Crear template de función `copiar` que permita copiar los elementos de un contenedor a otro.
+
+**Use Case # 1: Vector**
+```cpp
+std::vector vec = {1, 4, 5, 2, 3};
+std::vector vec2;
+utec::copiar(std::begin(vec), std::end(vec), std::back_inserter(vec2));
+for(const auto& item: vec2)
+    std::cout << item << std::endl;
+```
+
+**Use Case # 2: List**
+```cpp
+std::list lst = {1, 4, 5, 2, 3};
+std::list lst2(std::size(lst));
+utec::copiar(std::begin(lst), std::end(lst), std::begin(lst2));
+for(const auto& item: lst2)
+    std::cout << item << std::endl;
+```
+
+## Question #7 - Remover elementos
+Crear template de función `remover` que permita remover un elemento de un contenedor.
+
+**Use Case # 1: Vector**
+```cpp
+std::vector vec = {1, 4, 5, 2, 3};
+utec::remover(std::begin(vec), std::end(vec), 5);
+for(const auto& item: vec)
+    std::cout << item << std::endl;
+```
+
+## Question #8 - Reemplazar elementos
+Crear template de función `reemplazar` que permita reemplazar un elemento de un contenedor.
+
+**Use Case # 1: Vector**
+```cpp
+std::vector vec = {1, 4, 5, 2, 3};
+utec::reemplazar(std::begin(vec), std::end(vec), 5, 10);
+for(const auto& item: vec)
+    std::cout << item << std::endl;
+```
+
+## Question #9 - Contar elementos
+Crear template de función `contar` que permita contar la cantidad de un elemento específico de un contenedor.
+
+**Use Case # 1: Vector**
+```cpp
+std::vector vec = {1, 4, 5, 2, 3, 5, 1, 5};
+auto count = utec::contar(std::begin(vec), std::end(vec), 5);
+std::cout << count << std::endl;
+```
+
+## Question #10 - Variadic template function 
+Crear una función template `sum` que reciba una cantidad variable de parámetros y retorne la suma de los mismos.
+
+**Use Case # 1: Suma de enteros**
+```cpp
+auto total = utec::sum(1, 2, 3, 4, 5);
+std::cout << total << std::endl;
+```
+
+**Use Case # 2: Suma de doubles**
+```cpp
+auto total = utec::sum(1.1, 2.2, 3.3, 4.4, 5.5);
+std::cout << total << std::endl;
+```
+
+#Question #11 - Variadic template function
+Crear una función template `concat` que reciba una cantidad variable de parámetros y retorne la concatenación de los mismos.
+
+**Use Case # 1: Concatenación de strings**
+```cpp
+auto texto = utec::concat("Hola", " ", "Mundo");
+std::cout << texto << std::endl;
+```
+
+**Use Case # 2: Concatenación de strings**
+```cpp
+auto texto = utec::concat("Hola", " ", "Mundo", " ", "Cruel");
+std::cout << texto << std::endl;
+```
+
+**Use Case # 3: Concatenación de vectores**
+```cpp
+std::vector vec1 = {1, 2, 3};
+std::vector vec2 = {4, 5, 6};
+std::vector vec3 = {7, 8, 9};
+auto vec = utec::concat(vec1, vec2, vec3);
+for(const auto& item: vec)
+    std::cout << item << std::endl;
+```
+
+#Question #12 - Variadic template function
+Crear una función template `max` que reciba una cantidad variable de parámetros y retorne el valor máximo de los mismos.
+
+**Use Case # 1: Máximo de enteros**
+```cpp
+auto max = utec::max(1, 2, 3, 4, 5);
+std::cout << max << std::endl;
+```
+
+
+
+
+
