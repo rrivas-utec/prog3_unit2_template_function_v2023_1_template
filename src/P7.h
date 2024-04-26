@@ -1,0 +1,11 @@
+//
+// Created by rudri on 10/11/2020.
+//
+
+#ifndef PROG3_UNIT2_TEMPLATE_FUNCTION_V2023_1_P7_H
+#define PROG3_UNIT2_TEMPLATE_FUNCTION_V2023_1_P7_H
+
+
+void question_7();
+
+#endif //PROG3_UNIT2_TEMPLATE_FUNCTION_V2023_1_P7_H

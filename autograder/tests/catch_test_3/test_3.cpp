@@ -6,6 +6,12 @@
 #include "P3.h"
 using namespace std;
 
+static void test_3() {
+  int arr[] = {11, 12, 13, 14, 20, 23};
+  auto total = calcular_total(arr);
+  std::cout << total << std::endl;
+}
+
 TEST_CASE("Question #3") {
-    execute_test("test_3.in", question_3);
+    execute_test("test_3.in", test_3);
 }

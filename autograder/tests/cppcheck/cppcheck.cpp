@@ -4,12 +4,14 @@
 #include "../P3.h"
 #include "../P4.h"
 #include "../P5.h"
+#include "../P6.h"
+#include "../P7.h"
+#include "../P8.h"
+#include "../P9.h"
+#include "../P10.h"
+#include "../P11.h"
+#include "../P12.h"
 
 int main() {
-    question_1();
-    question_2();
-    question_3();
-    question_4();
-    question_5();
     return 0;
 }

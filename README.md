@@ -33,14 +33,14 @@ y retorne la cantidad de veces que el carácter aparece en la cadena de caracter
 ```cpp
 auto count = utec::count_char(
         "Esta es una prueba", 
-        'e')
-std::cout << "count: " << std::endl;
+        'e');
+std::cout << "count: " << count << std::endl;
 ```
 **Use Case #2 cadena std::string**
 ```cpp
 string text = "Esta es una prueba";
 auto count = utec::count_char(text, 'e')
-std::cout << "count: " << std::endl;
+std::cout << "count: " << count << std::endl;
 ```
 
 **Use Case #3 cadena std::array**
@@ -50,7 +50,7 @@ std::array text = {'E','s','t','a',' ',
                    'u','n','a',' ',
                    'p','r','u','e','b','a'};
 auto count = utec::count_char(text, 'e')
-std::cout << "count: " << std::endl;
+std::cout << "count: " << count << std::endl;
 ```
 
 **Use Case #4 cadena std::deque**
@@ -59,7 +59,7 @@ std::deque text = {'E','s','t','a',' ','e','s',' ',
                     'u','n','a',' ',
                     'p','r','u','e','b','a'};
 auto count = utec::count_char(text, 'e')
-std::cout << "count: " << std::endl;
+std::cout << "count: " << count << std::endl;
 ```
 
 ## Question #2 - Split
