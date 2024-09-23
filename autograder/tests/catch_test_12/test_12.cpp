@@ -7,7 +7,8 @@
 using namespace std;
 
 static void test_12() {
-
+    auto max = utec::max(1, 2, 3, 4, 5);
+    std::cout << max << std::endl;
 }
 
 TEST_CASE("Question #12") {

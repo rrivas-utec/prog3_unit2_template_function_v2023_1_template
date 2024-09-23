@@ -7,7 +7,8 @@
 using namespace std;
 
 static void test_10() {
-
+    auto total = utec::sum(1, 2, 3, 4, 5);
+    std::cout << total << std::endl;
 }
 
 TEST_CASE("Question #10") {

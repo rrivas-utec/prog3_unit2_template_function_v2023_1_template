@@ -7,7 +7,11 @@
 using namespace std;
 
 static void test_7() {
-
+    std::vector vec = {1, 4, 5, 2, 3};
+    auto it = utec::remover(std::begin(vec), std::end(vec), 5);
+    vec.erase(it, vec.end());
+    for(const auto& item: vec)
+        std::cout << item << std::endl;
 }
 
 TEST_CASE("Question #7") {

@@ -208,7 +208,8 @@ Crear template de función `remover` que permita remover un elemento de un conte
 **Use Case # 1: Vector**
 ```cpp
 std::vector vec = {1, 4, 5, 2, 3};
-utec::remover(std::begin(vec), std::end(vec), 5);
+auto it = utec::remover(std::begin(vec), std::end(vec), 5);
+vec.erase(it, vec.end());
 for(const auto& item: vec)
     std::cout << item << std::endl;
 ```
