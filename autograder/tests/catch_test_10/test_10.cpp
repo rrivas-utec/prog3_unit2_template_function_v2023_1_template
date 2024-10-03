@@ -6,11 +6,11 @@
 #include "P10.h"
 using namespace std;
 
-static void test_10() {
+static void test() {
     auto total = utec::sum(1, 2, 3, 4, 5);
     std::cout << total << std::endl;
 }
 
 TEST_CASE("Question #10") {
-    execute_test("test_10.in", test_10);
+    execute_test("test_10.in", test);
 }

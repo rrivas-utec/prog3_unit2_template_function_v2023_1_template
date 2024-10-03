@@ -6,11 +6,11 @@
 #include "P12.h"
 using namespace std;
 
-static void test_12() {
+static void test() {
     auto max = utec::max(1, 2, 3, 4, 5);
     std::cout << max << std::endl;
 }
 
 TEST_CASE("Question #12") {
-    execute_test("test_12.in", test_12);
+    execute_test("test_12.in", test);
 }

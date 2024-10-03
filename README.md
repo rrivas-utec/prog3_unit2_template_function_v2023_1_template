@@ -34,13 +34,13 @@ y retorne la cantidad de veces que el carácter aparece en la cadena de caracter
 auto count = utec::count_char(
         "Esta es una prueba", 
         'e');
-std::cout << "count: " << count << std::endl;
+std::cout << count << std::endl;
 ```
 **Use Case #2 cadena std::string**
 ```cpp
 string text = "Esta es una prueba";
-auto count = utec::count_char(text, 'e')
-std::cout << "count: " << count << std::endl;
+auto count = utec::count_char(text, 'e');
+std::cout << count << std::endl;
 ```
 
 **Use Case #3 cadena std::array**
@@ -49,8 +49,8 @@ std::array text = {'E','s','t','a',' ',
                    'e','s',' ',
                    'u','n','a',' ',
                    'p','r','u','e','b','a'};
-auto count = utec::count_char(text, 'e')
-std::cout << "count: " << count << std::endl;
+auto count = utec::count_char(text, 'e');
+std::cout << count << std::endl;
 ```
 
 **Use Case #4 cadena std::deque**
@@ -59,24 +59,37 @@ std::deque text = {'E','s','t','a',' ','e','s',' ',
                     'u','n','a',' ',
                     'p','r','u','e','b','a'};
 auto count = utec::count_char(text, 'e')
-std::cout << "count: " << count << std::endl;
+std::cout << count << std::endl;
 ```
 
 ## Question #2 - Split
-Generalizar la función `split` de modo que para cualquiera de los siguientes contenedores realice el split: cadena delimitada por 0, `std::string`, `std::w_string`, `std::u16string`, `std::u32string` y que lo delimite por un carácter.
+Generalizar la función `split` de modo que para cualquiera de los siguientes contenedores realice el split: cadena delimitada por 0, `std::string`, `std::wstring`, `std::u16string`, `std::u32string` y que lo delimite por un carácter.
 
 **Use Case #1 cadena delimitada por 0**
 ```cpp
-auto count = utec::split(
+auto result = utec::split(
         "Universidad de Ingenieria y Tecnologia", 
         ' ');
-std::cout << "count: " << std::endl;
+std::cout << result.size() << std::endl;
 ```
 **Use Case #2 cadena std::string**
 ```cpp
 string text = "Ciencia.de.la.Computacion";
-auto count = utec::count_char(text, '.')
-std::cout << "count: " << std::endl;
+auto result = utec::split(text, '.');
+std::cout << result.size() << std::endl;
+```
+**Use Case #3 cadena delimitada por 0**
+```cpp
+auto result = utec::split(
+        L"Universidad de Ingenieria y Tecnologia", 
+        L' ');
+std::cout << result.size() << std::endl;
+```
+**Use Case #4 cadena std::string**
+```cpp
+wstring text = L"Ciencia.de.la.Computacion";
+auto result = utec::split(text, L'.');
+std::cout << result.size() << std::endl;
 ```
 
 ## Question #3 - Sumatoria de colecciones estáticas y dinámicas
@@ -133,7 +146,7 @@ public:
 std::vector vec = {1, 4, 5, 2, 3};
 auto vec_sorted = utec::quick_sort(vec);
 for(const auto& item: vec_sorted)
-    std::cout << item << std::endl;
+    std::cout << item << " ";
 ```
 
 **Use Case # 2: Doubles**
@@ -141,7 +154,7 @@ for(const auto& item: vec_sorted)
 std::deque deq = {10.0, 4.5, 5.3, 2.4, 3.3};
 auto deq_sorted = utec::quick_sort(deq);
 for(const auto& item: deq_sorted)
-    std::cout << item << std::endl;
+    std::cout << item << " ";
 ```
 
 **Use Case # 3: Points**
@@ -154,7 +167,7 @@ std::vector vec = {
         point_t(4, 4, 4)};
 auto vec_sorted = utec::quick_sort(vec);
 for(const auto& point: vec_sorted)
-    std::cout << point << std::endl;
+    std::cout << point << " ";
 ```
 
 ## Question #5 - Buscar datos
@@ -164,21 +177,21 @@ Crear template de función `buscar` que permita buscar un dato en cualquiera de 
 ```cpp
 std::vector vec = {1, 4, 5, 2, 3};
 auto it = utec::buscar(std::begin(vec), std::end(vec), 5);
-std::cout << *it << std::endl;
+std::cout << *it << " ";
 ```
 
 **Use Case # 2: List**
 ```cpp
 std::list lst = {1, 4, 5, 2, 3};
 auto it = utec::buscar(std::begin(lst), std::end(lst), 5);
-std::cout << *it << std::endl;
+std::cout << *it << " ";
 ```
 
 **Use Case # 3: Set**
 ```cpp
 std::set st = {1, 4, 5, 2, 3};
 auto it = utec::buscar(std::begin(st), std::end(st), 5);
-std::cout << *it << std::endl;
+std::cout << *it << " ";
 ```
 
 ## Question #6 - Copiar elementos
@@ -187,10 +200,10 @@ Crear template de función `copiar` que permita copiar los elementos de un conte
 **Use Case # 1: Vector**
 ```cpp
 std::vector vec = {1, 4, 5, 2, 3};
-std::vector vec2;
+std::vector<int> vec2;
 utec::copiar(std::begin(vec), std::end(vec), std::back_inserter(vec2));
 for(const auto& item: vec2)
-    std::cout << item << std::endl;
+    std::cout << item << " ";
 ```
 
 **Use Case # 2: List**
@@ -199,7 +212,7 @@ std::list lst = {1, 4, 5, 2, 3};
 std::list lst2(std::size(lst));
 utec::copiar(std::begin(lst), std::end(lst), std::begin(lst2));
 for(const auto& item: lst2)
-    std::cout << item << std::endl;
+    std::cout << item << " ";
 ```
 
 ## Question #7 - Remover elementos
@@ -209,9 +222,9 @@ Crear template de función `remover` que permita remover un elemento de un conte
 ```cpp
 std::vector vec = {1, 4, 5, 2, 3};
 auto it = utec::remover(std::begin(vec), std::end(vec), 5);
-vec.erase(it, vec.end());
+vec.erase(it, std::end(vec));
 for(const auto& item: vec)
-    std::cout << item << std::endl;
+    std::cout << item << " ";
 ```
 
 ## Question #8 - Reemplazar elementos
@@ -222,7 +235,7 @@ Crear template de función `reemplazar` que permita reemplazar un elemento de un
 std::vector vec = {1, 4, 5, 2, 3};
 utec::reemplazar(std::begin(vec), std::end(vec), 5, 10);
 for(const auto& item: vec)
-    std::cout << item << std::endl;
+    std::cout << item << " ";
 ```
 
 ## Question #9 - Contar elementos
@@ -272,7 +285,7 @@ std::vector vec2 = {4, 5, 6};
 std::vector vec3 = {7, 8, 9};
 auto vec = utec::concat(vec1, vec2, vec3);
 for(const auto& item: vec)
-    std::cout << item << std::endl;
+    std::cout << item << " ";
 ```
 
 ## Question #12 - Variadic template function

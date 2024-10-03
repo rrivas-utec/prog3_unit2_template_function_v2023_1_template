@@ -7,7 +7,7 @@
 #include <vector>
 using namespace std;
 
-static void test_11() {
+static void test() {
     std::vector vec1 = {1, 2, 3};
     std::vector vec2 = {4, 5, 6};
     std::vector vec3 = {7, 8, 9};
@@ -21,5 +21,5 @@ static void test_11() {
 }
 
 TEST_CASE("Question #11") {
-    execute_test("test_11.in", test_11);
+    execute_test("test_11.in", test);
 }

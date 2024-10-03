@@ -9,12 +9,11 @@
 using namespace std;
 
 static void test() {
-  auto result = utec::split(
-      "Universidad de Ingenieria y Tecnologia",
-      ' ');
+  string text = "Ciencia.de.la.Computacion";
+  auto result = utec::split(text, '.');
   std::cout << result.size() << std::endl;
 }
 
-TEST_CASE("Question #2") {
-    execute_test("test_2.in", test);
+TEST_CASE("Question #2.2") {
+    execute_test("test_2_2.in", test);
 }
